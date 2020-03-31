@@ -13,6 +13,7 @@ export default function Profile(){
 
     const ongId = localStorage.getItem('ongId')
     const ongName = localStorage.getItem('ongName')
+ 
 
     useEffect(()=>{
         api.get('profile',{
@@ -50,6 +51,7 @@ export default function Profile(){
                 <span>Bem vinda, {ongName}</span>
                 <Link className="button" to="incidents/new">Cadastrar novo caso</Link>
                 <button onClick={handleLogout} type="button"><FiPower size={18} color="#e02041"/></button>
+
             </header>
             <h1>Casos cadastrados</h1>
             <ul>
